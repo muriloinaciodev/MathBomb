@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        div.block {
+            width: 500px;
+            height: 500px;
+            margin:auto;
+        }
+        div#first {background-color: red}
+        div#second {background-color: blue; display: none;}
+    </style>
+</head>
+<body>
+    <div id="first" class="block">
+        <button onclick="switchPage(true)">go to blue</button>
+    </div>
+    <div id="second" class="block">
+        <button onclick="switchPage(false)">go to red</button>
+    </div>
+    <script>
+        let red = document.getElementById('first')
+        let blue = document.getElementById('second')
+
+        function switchPage(cases){
+            console.log('teste')
+            if (cases) {
+                red.style.display = 'none'
+                blue.style.display = 'block'
+            } else {
+                red.style.display = 'block'
+                blue.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>
