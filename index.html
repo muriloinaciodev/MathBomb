@@ -7,13 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="getElements()">
     <h1 id="title">MATH BOMB</h1>
 <main>
     <div id="menu">
         <p class="justify">Você tem <span id="destaque">1 minuto</span> para conseguir desarmar a bomba, mas para isso você precisa responder <span id="destaque">10 contas matematicas</span>, sera que você é capaz?</p>
         <br>
-        <p class="center"><button id="start">Começar</button></p>
+        <p class="center"><button id="start" onclick="startGame()">Começar</button></p>
+    </div>
+    <div id="game" class="center">
+        <p id="calculation">LOADING</p>
+        <input type="number" id="input" onkeyup="inputEnter(event)">
+        <br>
+        <p id="streak">Numero de Acertos: 0</p>
     </div>
 </main>
 

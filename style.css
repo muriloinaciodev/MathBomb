@@ -64,6 +64,30 @@ div#menu {
     font-size: 1.2em;
 }
 
+div#game {
+    width: 60%;
+    height: 80%;
+    max-width: 700px;
+    padding: 1em;
+    display: none;
+    background-color: white;
+    margin: auto;
+    position: relative;
+    top: 7%;
+    background-color: var(--corC);
+}
+div#game > p {
+    margin-top: 10%;
+    margin-bottom: 50px;
+    font-size: 3em;
+    font-family: Consolas, monospace;
+}
+
+div#game > input{
+    font-size: 2em;
+    width: 80%;
+}
+
 button#start {
     color: white;
     background-color: green;
@@ -106,8 +130,12 @@ span#destaque {
     color: red;
 }
 
-@media (max-width:700px){
+@media (max-width:750px){
     div#menu {
         width: 70vw;
+    }
+    div#game {
+        width: 70vw;
+        width: 80%;
     }
 }

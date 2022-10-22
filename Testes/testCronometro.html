@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <style>
+        p {
+            font-size: 1.5em;
+            margin: 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="watch">
+        <span id="mm">00</span>.<span id="ss">00</span>
+        
+    </p>
+    <p>
+        <button onclick="Play()">Play</button>
+        <button onclick="Pause()">Pause</button>
+        <button onclick="Stop()">Stop</button>
+    </p>
+    <script>
+        mm = 0
+        ss = 0
+
+        function Play() {
+            console.log('teste')
+            cronometro = setInterval(loop, 100)
+        }
+
+        function loop(){
+            ss++
+            if (ss == 10) {
+                mm++
+                ss = 0
+            }
+            watch = watch = document.body.children['watch']
+            watch.children['ss'].innerText = ss < 10 ? `0${ss}`:ss
+            watch.children['mm'].innerText = mm < 10 ? `0${mm}`:mm
+        }
+        
+        function Pause() {
+            clearTimeout(cronometro)
+        }
+
+        function Stop() {
+            Pause()
+            mm = ss = 0
+            watch.children['ss'].innerText = ss < 10 ? `0${ss}`:ss
+            watch.children['mm'].innerText = mm < 10 ? `0${mm}`:mm
+        }
+    </script>
+</body>
+</html>
