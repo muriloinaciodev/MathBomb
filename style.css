@@ -138,7 +138,6 @@ div#game > p#calculation {
     font-family: Consolas, monospace;
 
     font-size: 3em;
-    margin-top: 0px;
 }
 
 div#game > p#streak {
@@ -160,7 +159,7 @@ div#keyboard {
 
 div#keyboard p#visor {
     height: 70px;
-    width: 218px;
+    width: 208px;
     background-color: rgba(0, 0, 0, 0.06);
     outline: 1px solid rgba(0, 0, 0, 0.5);
     margin: auto;
@@ -169,6 +168,14 @@ div#keyboard p#visor {
     line-height: 70px;
     text-align: right;
     font-family: Consolas, monospace;
+
+    direction: rtl;
+    white-space: nowrap;
+    overflow: auto;
+    padding-right: 10px;
+}
+div#keyboard p#visor::-webkit-scrollbar {
+    display: none;
 }
 
 div#keyboard > button.btnNum {
@@ -218,5 +225,14 @@ footer > p > a {
     }
     input#inputPC {
         display: none;
+    }
+    div#game > p#calculation {
+        margin-top: 10%;
+        margin-bottom: 20px;
+        font-size: 1.2em;
+        font-family: Consolas, monospace;
+    
+        font-size: 3em;
+        margin-top: 0px;
     }
 }
