@@ -10,15 +10,32 @@
 <body onload="getElements()">
     <h1 id="title">MATH BOMB</h1>
 <main>
+    <!--DIV MENU -PRIMEIRO MENU DO INDEX- -->
     <div id="menu">
-        <p class="justify">Você tem <span id="destaque">1 minuto</span> para conseguir desarmar a bomba, mas para isso você precisa responder <span id="destaque">10 contas matematicas</span>, sera que você é capaz?</p>
+        <p class="justify">Você tem <span class="destaque">1 minuto</span> para conseguir desarmar a bomba, mas para isso você precisa responder <span class="destaque">10 contas matematicas</span>, sera que você é capaz?</p>
         <br>
         <p class="center"><button id="start" onclick="startGame()">Começar</button></p>
     </div>
+
+    <!--DIV GAME -SEGUNDO MENU ONDE EXISTE JOGABILIDADE- -->
     <div id="game" class="center">
         <p id="calculation">LOADING</p>
-        <input type="number" id="input" onkeyup="inputEnter(event)">
-        <br>
+
+        <!--CASO A TELA FOR GRANDE -PC- -->
+        <input type="number" id="inputPC" onkeyup="inputEnter(event)">
+
+        <!--CASO A TELA FOR PEQUENA -CEL- -->
+        <div id="keyboard">
+            <p id="visor"></p>
+            <button class="btnNum" onclick="btnClick(9)">9</button><button class="btnNum" onclick="btnClick(8)">8</button><button class="btnNum" onclick="btnClick(7)">7</button>
+            <br>
+            <button class="btnNum" onclick="btnClick(6)">6</button><button class="btnNum" onclick="btnClick(5)">5</button><button class="btnNum" onclick="btnClick(4)">4</button>
+            <br>
+            <button class="btnNum" onclick="btnClick(3)">3</button><button class="btnNum" onclick="btnClick(2)">2</button><button class="btnNum" onclick="btnClick(1)">1</button>
+            <br>
+            <button class="btnNum" onclick="btnClick('x')">x</button><button class="btnNum" onclick="btnClick(0)">0</button><button class="btnNum" onclick="btnClick('e')">-></button>
+        </div>
+
         <p id="streak">Numero de Acertos: 0</p>
     </div>
 </main>
@@ -31,7 +48,14 @@
     </p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+    divMenu = document.getElementById('menu');
+    divGame = document.getElementById('game');
+    function startGame(){
+        divMenu.style.display = 'none'
+        divGame.style.display = 'block'
+    }
+</script>
 </body>
 </html>
 

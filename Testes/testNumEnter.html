@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Number</title>
+    <style>
+        button.btnNum {
+            margin: 2px 0px;
+            padding: 0px;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2em;
+            font-family: Consolas, monospace;
+        }
+        div#teclado {
+            width: 160px;
+        }
+        div#teclado > p {
+            position: relative;
+            left: -1px;
+
+            direction: rtl;
+            white-space: nowrap;
+            overflow: auto;
+
+            margin: 2px;
+            padding-right: 10px;
+            height: 3em;
+            
+            border-radius: 2px;
+            outline: 1px solid rgba(0, 0, 0, 0.5) ;
+            background-color: rgba(0, 0, 0, 0.08);
+
+            font-family: Console, monospace;
+            font-size: 1.2em;
+            line-height: 3em;
+            text-align: right;
+        }
+        div#teclado > p::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="teclado">
+        <p id="visor"></p>
+        <button class="btnNum" onclick="btnClick(9)">9</button>
+        <button class="btnNum" onclick="btnClick(8)">8</button>
+        <button class="btnNum" onclick="btnClick(7)">7</button><br>
+        <button class="btnNum" onclick="btnClick(6)">6</button>
+        <button class="btnNum" onclick="btnClick(5)">5</button>
+        <button class="btnNum" onclick="btnClick(4)">4</button><br>
+        <button class="btnNum" onclick="btnClick(3)">3</button>
+        <button class="btnNum" onclick="btnClick(2)">2</button>
+        <button class="btnNum" onclick="btnClick(1)">1</button>
+        <button class="btnNum" onclick="btnClick('x')">x</button>
+        <button class="btnNum" onclick="btnClick(0)">0</button>
+        <button class="btnNum" onclick="btnClick('e')">-></button>
+        
+    </div>
+    <script>
+        visor = document.getElementById('visor')
+        function btnClick(n){
+            if (n == 'x'){
+                visor.innerText = visor.innerText.slice(0, -1)
+            } else if (n == 'e'){
+                alert(visor.innerText)
+            } 
+            else {
+                visor.innerText += n 
+            }
+            
+        }
+    </script>
+</body>
+</html>
