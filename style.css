@@ -131,16 +131,20 @@ div#game {
     background-color: var(--corC);
 }
 
-div#game > p {
+div#game > p#calculation {
     margin-top: 10%;
-    margin-bottom: 50px;
+    margin-bottom: 10%;
     font-size: 1.2em;
     font-family: Consolas, monospace;
-}
 
-div#game > p#calculation {
     font-size: 3em;
     margin-top: 0px;
+}
+
+div#game > p#streak {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-family: Consolas, monospace;
 }
 
 div#game > input#inputPC{
@@ -150,7 +154,7 @@ div#game > input#inputPC{
 }
 
 div#keyboard {
-    width: 164px;
+    width: 224px;
     margin: auto;
 }
 
@@ -164,8 +168,8 @@ div#keyboard p#visor {
 }
 
 div#keyboard > button.btnNum {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     margin: 2px;
     background-color: rgba(0, 0, 0, 0.06);
     outline: 1px solid rgba(0, 0, 0, 0.5);
