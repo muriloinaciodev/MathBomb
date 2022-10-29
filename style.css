@@ -133,7 +133,7 @@ div#game {
 
 div#game > p#calculation {
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 20px;
     font-size: 1.2em;
     font-family: Consolas, monospace;
 
@@ -159,12 +159,16 @@ div#keyboard {
 }
 
 div#keyboard p#visor {
-    height: 50px;
-    width: 158px;
+    height: 70px;
+    width: 218px;
     background-color: rgba(0, 0, 0, 0.06);
     outline: 1px solid rgba(0, 0, 0, 0.5);
     margin: auto;
     margin-bottom: 2px;
+    font-size: 1.5em;
+    line-height: 70px;
+    text-align: right;
+    font-family: Consolas, monospace;
 }
 
 div#keyboard > button.btnNum {
@@ -174,6 +178,8 @@ div#keyboard > button.btnNum {
     background-color: rgba(0, 0, 0, 0.06);
     outline: 1px solid rgba(0, 0, 0, 0.5);
     border:none;
+    font-size: 1.5em;
+    font-family: Consolas, monospace;
 }
 div#keyboard > button.btnNum:hover {
     background-color: rgba(0, 0, 0, 0.1);
